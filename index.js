@@ -31,49 +31,28 @@ function formatDate() {
   return `${day} ${date} ${month} ${year}, ${hours}:${minutes}`;
 }
 
-let dateElement = document.querySelector("#time");
-dateElement.innerHTML = formatDate();
-
 function search(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-text-input");
-  let h1 = document.querySelector("h1");
-  if (searchInput.value) {
-    h1.innerHTML = `${searchInput.value}`;
-  } else {
-    h1.innerHTML = null;
-    alert("Please enter a city first.");
-  }
+  let city = searchInput.value;
+
+  let apiKey = "ae82465odb0463ef60t6098c458a9b30";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+
+  axios.get(apiUrl).then(displayTemperature);
 }
 
-function getCurrentTemperature(event) {
+function displayTemperature(response) {
   event.preventDefault();
-  let searchInput = document.querySelector("#search-text-input");
   let temperatureElement = document.querySelector("#temperature");
-  if (searchInput.value) {
-    function displayTemperature(response) {
-      let temperature = Math.round(response.data.temperature.current);
-      temperatureElement.innerHTML = `${temperature}*C`;
-    }
-
-    let city = `${searchInput.value}`;
-    let apiKey = "ae82465odb0463ef60t6098c458a9b30";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
-
-    axios.get(apiUrl).then(displayDefaultTemperature);
-  } else {
-    function displayDefaultTemperature(response) {
-      let temperature = Math.round(response.data.temperature.current);
-      temperatureElement.innerHTML = `${temperature}*C`;
-    }
-
-    let city = "Huddersfield";
-    let apiKey = "ae82465odb0463ef60t6098c458a9b30";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
-
-    axios.get(apiUrl).then(displayDefaultTemperature);
-  }
+  let temperature = Math.round(response.data.temperature.current);
+  let cityElement = document.querySelector("#current-city");
+  cityElement.innerHTML = response.data.city;
+  temperatureElement.innerHTML = temperature;
 }
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search, getCurrentTemperature);
+
+let dateElement = document.querySelector("#time");
+dateElement.innerHTML = formatDate();
