@@ -52,7 +52,7 @@ function displayTemperature(response) {
 }
 
 let form = document.querySelector("#search-form");
-form.addEventListener("submit", search, getCurrentTemperature);
+form.addEventListener("submit", search);
 
 let dateElement = document.querySelector("#time");
 dateElement.innerHTML = formatDate();
