@@ -16,43 +16,50 @@
   </head>
   <body>
     <div class="container">
-      <form id="search-form">
-        <input
-          type="text"
-          placeholder="Search for a city..."
-          autocomplete="off"
-          autofocus="on"
-          id="search-text-input"
-        />
-        <input class="submit-button" type="submit" value="Search" />
-      </form>
-      <br />
-      <br />
-      <div class="row">
-        <section class="col-6 left">
-          <h1 class="title" id="current-city">Huddersfield</h1>
+      <div class="box">
+        <header>
           <br />
-          <h3 id="time"><em>Display time.</em></h3>
-          <br />
-          <br />
-          <p>
-            <span id="temperature-description"
-              >Sunny with a chance of showers. ☀️☔</span
-            >
-            <span id="humidity"></span>
-            <span id="wind-speed"></span>
-          </p>
-          <br />
-        </section>
-        <section class="col-6 right">
-          <h2 id="temperature">24°C</h2>
-          <div>
+          <form id="search-form">
+            <input
+              type="text"
+              placeholder="Search for a city..."
+              autocomplete="off"
+              autofocus="on"
+              id="search-text-input"
+            />
+            <input class="submit-button" type="submit" value="Search" />
+          </form>
+        </header>
+        <br />
+        <br />
+        <main class="row">
+          <section class="col-6 left">
+            <h1 class="title" id="current-city">Huddersfield</h1>
+            <br />
+            <br />
+            <h3 id="time"><em>Display time.</em></h3>
+            <br />
+            <br />
+            <p>
+              <span id="temperature-description"
+                >Sunny with a chance of showers. ☀️☔</span
+              >
+              <span id="humidity"></span>
+              <span id="wind-speed"></span>
+            </p>
+            <br />
+          </section>
+          <section class="col-6 right">
+            <h2 id="temperature">24°C</h2>
             <img
               id="icon"
               src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
             />
-          </div>
-        </section>
+          </section>
+          <section>Forecast here.</section>
+        </main>
+        <br />
+        <br />
         <footer>
           This project was coded by
           <a href="https://github.com/IsabelleLongley01?tab=repositories"
