@@ -18,9 +18,11 @@ body {
 }
 #search-text-input {
   width: 50%;
+  font-family: "Lato", sans-serif;
 }
 .submit-button {
   max-width: 70px;
+  font-family: "Lato", sans-serif;
 }
 .left {
   display: inline;
@@ -28,11 +30,18 @@ body {
 .title {
   display: inline;
   margin: 20px 0 20px 0;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
 }
 #time {
   display: inline;
   margin: 20px 0 20px 0;
   font-size: 20px;
+  font-family: "Lato", sans-serif;
+}
+#description-para {
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
 }
 #temperature-description {
   display: inline;
@@ -44,10 +53,20 @@ body {
   font-size: 80px;
   margin-bottom: 0;
   text-align: center;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
 }
 #icon {
   display: block;
   margin-left: auto;
   margin-right: auto;
   max-width: 80px;
+  background-color: #aac8a7;
+  border-radius: 70px;
+}
+.forecast {
+  font-family: "Lato", sans-serif;
+}
+footer {
+  font-family: "Lato", sans-serif;
 }
