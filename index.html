@@ -12,40 +12,7 @@
       crossorigin="anonymous"
     />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <style>
-      .container {
-        max-width: 500px;
-        margin: 0 auto;
-        padding: 100px 20px;
-      }
-      form {
-        display: inline;
-      }
-      .submit-button {
-        max-width: 70px;
-      }
-      .left {
-        display: inline;
-      }
-      .title {
-        display: inline;
-        margin: 20px 0 20px 0;
-      }
-      #time {
-        display: inline;
-        margin: 20px 0 20px 0;
-      }
-      #temperature-description {
-        display: inline;
-      }
-      .right {
-        display: inline;
-        max-width: 100px;
-      }
-      #temperature {
-        font-size: 50px;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="container">
@@ -62,7 +29,7 @@
       <br />
       <br />
       <div class="row">
-        <section class="col-9 left">
+        <section class="col-6 left">
           <h1 class="title" id="current-city">Huddersfield</h1>
           <br />
           <h3 id="time"><em>Display time.</em></h3>
@@ -73,8 +40,8 @@
           </p>
           <br />
         </section>
-        <section class="col-3 right">
-          <h2 id="temperature">24*C</h2>
+        <section class="col-6 right">
+          <h2 id="temperature">24°C</h2>
         </section>
       </div>
     </div>

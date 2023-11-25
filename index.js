@@ -48,7 +48,7 @@ function displayTemperature(response) {
   let temperature = Math.round(response.data.temperature.current);
   let cityElement = document.querySelector("#current-city");
   cityElement.innerHTML = response.data.city;
-  temperatureElement.innerHTML = temperature;
+  temperatureElement.innerHTML = `${temperature}°C`;
 }
 
 let form = document.querySelector("#search-form");
@@ -56,3 +56,5 @@ form.addEventListener("submit", search);
 
 let dateElement = document.querySelector("#time");
 dateElement.innerHTML = formatDate();
+
+search("Huddersfield");
