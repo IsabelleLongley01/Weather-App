@@ -67,6 +67,29 @@ body {
 .forecast {
   font-family: "Lato", sans-serif;
 }
+.weather-forecast {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.weather-forecast-date {
+  text-align: center;
+}
+
+.weather-forecast-icon {
+  text-align: center;
+}
+.weather-forecast-temperatures {
+  text-align: center;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.weather-forecast-temperature {
+  padding: 0 5px;
+}
 footer {
   font-family: "Lato", sans-serif;
 }
