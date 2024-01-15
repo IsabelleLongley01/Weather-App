@@ -35,10 +35,12 @@ function search(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-text-input");
   let city = searchInput.value;
+  fetchCurrentWeather(city);
+}
 
+function fetchCurrentWeather(city); {
   let apiKey = "ae82465odb0463ef60t6098c458a9b30";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
-
   axios.get(apiUrl).then(displayTemperature);
 }
 
@@ -66,4 +68,4 @@ form.addEventListener("submit", search);
 let dateElement = document.querySelector("#time");
 dateElement.innerHTML = formatDate();
 
-search("Huddersfield");
+fetchCurrentWeather("Harrogate");
