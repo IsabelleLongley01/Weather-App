@@ -64,7 +64,7 @@ function displayTemperature(response) {
 }
 
 function formatDay(timestamp) {
-  let date = newDate(timestamp * 1000);
+  let date = new Date(timestamp * 1000);
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   return days[date.getDay()];
 }
@@ -87,7 +87,7 @@ function displayForecast(response) {
          <div class="weather-forecast-date">${formatDay(day.time)}</div>
          <div class="weather-forecast-icon"><img src="${
            day.condition.icon_url
-         }></div>
+         }"></div>
          <div class="weather-forecast-temperatures">
            <span class="weather-forecast-temperature">
               <strong>${Math.round(day.temperature.maximum)}°</strong>
